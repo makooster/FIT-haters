@@ -19,8 +19,6 @@ class street_parking(models.Model):
     street1 = models.CharField(max_length=255, default='')
     street2 = models.CharField(max_length=255, default='')
 
-
-
 class parking_place(models.Model):
     street_parking = models.ForeignKey(street_parking, on_delete=models.CASCADE, null=True, blank=True)
     num = models.IntegerField(default=0)
