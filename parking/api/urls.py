@@ -4,4 +4,10 @@ from api import views
 
 urlpatterns = [
     path('users/', views.user),
+    path('parkings/', views.parkingList, name = "parkingsList"),
+    path('parkings/<int:id>/', views.parkingListDetail, name = "parkingsListDetail"),
+    path('parkingplace/<int:id>/', views.parkingPlaceDetail, name = "parkingsPlaceDetail"),
+    path('parkings/update/<int:id>/', views.UpdateParkingInfo, name = "parkingsUpdate"),
+    path('parkingstreet/update/<int:id>/', views.UpdateStreetParkingInfo, name = "parkingsUpdate"),
+    path('parking/street/', views.streetIntersection, name = "parkingsUpdate"),
 ]
